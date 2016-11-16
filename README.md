@@ -23,7 +23,7 @@ The most common Operation method of the tool about git.The purpose is convenient
 ###4.查看此时的git状态  
    命令：
    
-   >$ git status -s
+     >$ git status -s
    
    结果会显示如下：
    ?? node.txt
@@ -32,9 +32,9 @@ The most common Operation method of the tool about git.The purpose is convenient
 ###5.添加文件(node.txt)到存储区域，在使用 git status -s查看git的状态命令将显示文件暂存区域。
    命令：
    
-   >$ git add node.txt
-   >$  git status -s
-   
+      >$ git add node.txt
+      >$  git status -s
+
    结果显示如下：
    
    A node.txt
