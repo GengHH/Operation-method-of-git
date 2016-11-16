@@ -42,13 +42,13 @@ The most common Operation method of the tool about git.The purpose is convenient
 ###6.提交更改 (使用-m指令，后面直接跟上提交时的描述信息)
    命令：
    
-  >$ git commit -m 'first commit'
+     >$ git commit -m 'first commit'
    
    
 ###7（不必须操作）.提交后查看日志信息
   命令：
   
-  >$ git log
+    >$ git log
   
   结果显示该项目的所有的提交的情况，按照时间先后排序显示，如
   
@@ -63,7 +63,7 @@ The most common Operation method of the tool about git.The purpose is convenient
 ###8（不必须操作）. 使用git show命令查看提交的细节。 Git的show命令的SHA-1提交ID作为参数。
   命令：
   
-  >$ git show 19ae20683fc460db7d127cf201a1429523b0e319
+    >$ git show 19ae20683fc460db7d127cf201a1429523b0e319
   
   结果会显示详细的修改情况，如：
   commit 19ae20683fc460db7d127cf201a1429523b0e319
@@ -79,7 +79,7 @@ The most common Operation method of the tool about git.The purpose is convenient
 ###9.以上步骤结束后，若果想要将该项目提交到自己的github的新建的repertory中，使用远程推送
   命令：
   
-  >$ git push  git@github.com:GengHH/***.git
+    >$ git push  git@github.com:GengHH/***.git
   
   git@github.com:GengHH/***.git 代表自己的github仓库的地址
 
