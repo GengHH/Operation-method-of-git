@@ -76,7 +76,24 @@ The most common Operation method of the tool about git.The purpose is convenient
   
   三个+代表的是此次修改所新添加的文件内容
   
-###9.以上步骤结束后，若果想要将该项目提交到自己的github的新建的repertory中，使用远程推送
+###9.以上步骤结束后，首先执行以下的某条命令（目的是在远程仓库发生改变后，实现本地仓库和远程仓库同步更新）
+  命令：
+  
+    
+     更新当前分支
+    
+     >$ git pull 
+     
+     or更新 origin remote 的 master 分支
+    
+     >$ git pull origin master
+     
+     or获取服务器端的改动，比如其他用户新建了一个分支并push到了服务器，运行这个命令之后会得到这个分支的信息
+     
+     >$ git fetch
+   
+
+###10.若果想要将该项目提交到自己的github的新建的repertory中，使用远程推送
   命令：
   
     >$ git push  git@github.com:GengHH/***.git
