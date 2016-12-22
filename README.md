@@ -5,7 +5,7 @@ The most common Operation method of the tool about git.The purpose is convenient
 
 **这篇文章介绍的是若何利用git bash 工具实现最常用的git相关的操作方法，从而实现和github的联合使用。**
 
-##第一种情况
+##第一种情况(克隆别人的项目再提交到自己的github仓库)
 ### 1.首先在本地创建文件夹（也就是本地的git仓库）
    命令：
    
@@ -100,3 +100,41 @@ The most common Operation method of the tool about git.The purpose is convenient
   
   git@github.com:GengHH/***.git 代表自己的github仓库的地址
 
+
+
+
+##第二种情况（将本地的以项目首次上传到自己的github上）
+
+*注意：* **前提是建立好了公钥和私钥。本地和远程github服务器能够连通**
+
+###1.在myProject根目录下执行 git init，把工程转化成git工程。
+  	$>git init
+
+###2.在myProject根目录下配置提交的用户名和mail地址
+	$>git config --global user.name "myname"  
+	$>git config --global user.email "mymail@mymail.com"  
+
+  提醒：**该步骤并不是必须的**
+
+###3.在myProject根目录下执行：
+	$>git remote add origin https://github.com/myname/***.git
+
+
+###4.在本地仓库中添加该项目的所有的内容
+	$>git add .
+
+   提醒：**可以根据git add <文件名>有选择的添加内容**
+
+###5.提交该项目到本地仓库
+
+	$>git commit -m "first commit"  
+
+ 提醒：**-m后面跟的是提交时的备注**
+
+###6.更新本地仓库的master分支使得和远程master分支保持一致
+	$>git pull --rebase origin master
+
+###7.推送本地仓库到远程仓库
+	$>git push -u origin master
+	
+ 提醒：**之后的推送只需要执行 git push即可**
